@@ -1,42 +1,42 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Digi Slick Renders</title>
-
-<!--CSS-->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap-light.css">
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-<!--/CSS-->
-
-<!--JS-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/jquery.plugin.js"></script>
-<!--/JS-->
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d0d">
+<meta name="description" content="Pardeep Kumar — VFX, compositing, creative technology and electronics.">
+<title>Pardeep Kumar — Creative Technologist</title>
+<style>
+:root{--bg:#080d0d;--panel:#101918;--line:rgba(151,255,205,.16);--mint:#8df5c1;--text:#e8f1ec;--muted:#9aaba3;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 75% 5%,rgba(39,155,104,.14),transparent 34%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,48px 48px,48px 48px}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font:700 14px var(--mono);letter-spacing:.12em;color:var(--mint)}.brand span{color:#eaf5ef}.navlinks{display:flex;gap:26px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--mint)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--mint);padding:8px 11px;border-radius:8px}
+.hero{min-height:620px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:54px;padding:65px 0 80px}.eyebrow{font:12px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--mint)}
+h1{font-size:clamp(48px,7.2vw,86px);line-height:.98;letter-spacing:-.065em;margin:22px 0 18px;font-weight:760}.name-accent{color:var(--mint);text-shadow:0 0 34px rgba(141,245,193,.17)}.hero p{font-size:17px;color:#b4c3bb;max-width:610px;margin:0 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 18px;border-radius:8px;font-weight:650;font-size:13px;border:1px solid var(--line);transition:.25s}.btn.primary{background:var(--mint);color:#07110c;border-color:var(--mint)}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(64,201,139,.12)}
+.hero-visual{height:400px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:320px;height:320px;border:1px solid rgba(141,245,193,.22);border-radius:50%;box-shadow:0 0 70px rgba(64,201,139,.08),inset 0 0 60px rgba(64,201,139,.06);animation:breath 5s ease-in-out infinite}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(141,245,193,.17);border-radius:50%;inset:25px;transform:rotateX(67deg) rotate(-25deg)}.orbit:after{inset:56px;transform:rotateX(67deg) rotate(35deg)}
+.core{width:185px;height:185px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#254f40,#12251e 45%,#080e0d 75%);border:1px solid rgba(141,245,193,.4);box-shadow:0 0 60px rgba(64,201,139,.18),inset 0 0 35px rgba(141,245,193,.12);display:grid;place-items:center;position:relative}.core:before{content:"PK";font:700 58px var(--mono);letter-spacing:-.12em;color:var(--mint);text-shadow:0 0 25px rgba(141,245,193,.55)}.core:after{content:"";position:absolute;inset:-12px;border:1px dashed rgba(141,245,193,.35);border-radius:50%;animation:spin 28s linear infinite}
+.scan{position:absolute;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(141,245,193,.55),transparent);top:50%;animation:scan 5s ease-in-out infinite}.hud{position:absolute;font:10px var(--mono);letter-spacing:.1em;color:#8ca99a}.hud.one{top:28px;left:0}.hud.two{right:0;bottom:45px;text-align:right}
+.section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.04em;line-height:1.1;margin:8px 0 0}.section-note{color:var(--muted);font-size:13px;max-width:330px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(145deg,rgba(18,31,27,.94),rgba(10,17,16,.94));border:1px solid var(--line);border-radius:14px;padding:26px}.card p{color:#b2c0b8;margin:0}.tag{font:10px var(--mono);letter-spacing:.14em;color:var(--mint);text-transform:uppercase;margin-bottom:13px}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill{border:1px solid var(--line);background:rgba(13,23,20,.7);border-radius:10px;padding:16px}.skill b{display:block;font-size:14px}.skill small{color:var(--muted);font:10px var(--mono)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.work{min-height:185px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#172721,#0d1513);border:1px solid var(--line);border-radius:13px;padding:22px;position:relative;overflow:hidden;transition:.25s}.work:hover{transform:translateY(-4px);border-color:rgba(141,245,193,.5)}.work:after{content:"";position:absolute;width:160px;height:160px;border:1px solid rgba(141,245,193,.14);border-radius:50%;right:-60px;top:-55px;box-shadow:0 0 0 20px rgba(141,245,193,.025),0 0 0 42px rgba(141,245,193,.02)}.work h3{font-size:20px;margin:0 0 7px}.work p{color:var(--muted);font-size:13px;margin:0;max-width:260px}.arrow{color:var(--mint);font:12px var(--mono)}
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.social{padding:20px;border:1px solid var(--line);border-radius:11px;background:rgba(13,23,20,.72);transition:.25s}.social:hover{border-color:rgba(141,245,193,.55);transform:translateY(-4px);background:#12221b}.social strong{display:block;margin-bottom:5px}.social span{font:10px var(--mono);color:var(--mint);letter-spacing:.08em}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:28px;background:linear-gradient(110deg,#14281f,#0c1512);border:1px solid var(--line);border-radius:16px;padding:34px}.contact p{margin:8px 0 0;color:var(--muted)}footer{padding:28px 0;color:#75877d;font:11px var(--mono);display:flex;justify-content:space-between;gap:16px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes breath{0%,100%{transform:scale(.97);opacity:.75}50%{transform:scale(1.03);opacity:1}}@keyframes scan{0%,100%{transform:translateY(-135px);opacity:0}20%,80%{opacity:.8}50%{transform:translateY(135px);opacity:.35}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:60px 0 50px;gap:10px}.hero-visual{height:320px}.orbit{width:260px;height:260px}.core{width:150px;height:150px}.core:before{font-size:46px}.about-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr 1fr}.social-grid{grid-template-columns:1fr 1fr}.section{padding:58px 0}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#0a1210;padding:18px 22px;border-bottom:1px solid var(--line);flex-direction:column;z-index:5}.navlinks.open{display:flex}.menu{display:block}}
+@media(max-width:520px){.wrap{width:calc(100% - 30px)}h1{font-size:54px}.hero p{font-size:15px}.hero-visual{height:275px}.orbit{width:220px;height:220px}.core{width:128px;height:128px}.hud{font-size:8px}.work-grid{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:12px}.contact{display:block}.contact .btn{display:inline-block;margin-top:20px}footer{display:block}footer span{display:block;margin-top:7px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
-
 <body>
-
-<!--DARK OVERLAY-->
-<div class="overlay"></div>
-<!--/DARK OVERLAY-->
-
-<!--WRAP-->
-<div id="wrap">
-	<!--CONTAINER-->
-	<div class="container">
-		<img src="images/box.png" alt="Digi Slick Renders" class="image-align" />
-		<h1>
-			<span>We are</span><br/>
-			<span class="yellow">Rendering</span> the website.
-		</h1>
-		<p>Our site is currently <strong>under construction</strong> but we are working hard<br/> to create a new and fresh design.</p>
-	</div>
-	<!--/CONTAINER-->
-</div>
-<!--/WRAP-->
-
-</body>
-</html>
+<header class="wrap nav"><a class="brand" href="#top">PK<span> / PORTFOLIO</span></a><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Selected work</a><a href="#connect">Connect</a></nav><button class="menu" id="menu" aria-label="Toggle navigation">MENU</button></header>
+<main id="top">
+<section class="wrap hero"><div><div class="eyebrow">Creative technologist · India</div><h1>PARDEEP<br><span class="name-accent">KUMAR.</span></h1><p>I work where visual storytelling meets technology — creating imagery, compositing shots, shaping motion, and exploring the systems behind the screen.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↘</a><a class="btn" href="#connect">Get in touch</a></div></div><div class="hero-visual" aria-label="Abstract animated technical identity graphic"><div class="hud one">SYSTEM / PK-01<br>VISUALS + ENGINEERING</div><div class="orbit"></div><div class="core"></div><div class="scan"></div><div class="hud two">CREATIVE SYSTEMS<br>ONLINE <span style="color:var(--mint)">●</span></div></div></section>
+<section class="section" id="about"><div class="wrap"><div class="section-head"><div><div class="eyebrow">01 / About</div><h2>A mix of art<br>and engineering.</h2></div><div class="section-note">A multidisciplinary background built around curiosity, craft and problem-solving.</div></div><div class="about-grid"><article class="card"><div class="tag">Visual craft</div><p>My creative work spans VFX compositing, motion design, graphic design and video editing. I enjoy building visual experiences that feel considered, cinematic and clear.</p></article><article class="card"><div class="tag">Technical mindset</div><p>With an Electronics & Communication Engineering background and hands-on experience with embedded systems, I’m equally interested in the technology powering creative ideas.</p></article></div></div></section>
+<section class="section" id="skills"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 / Toolkit</div><h2>Tools I work with.</h2></div><div class="section-note">A selection of creative and technical tools across my workflow.</div></div><div class="skill-grid"><div class="skill"><b>Nuke</b><small>VFX COMPOSITING</small></div><div class="skill"><b>After Effects</b><small>MOTION DESIGN</small></div><div class="skill"><b>Premiere Pro</b><small>VIDEO EDITING</small></div><div class="skill"><b>Photoshop</b><small>IMAGE MAKING</small></div><div class="skill"><b>Blender</b><small>3D WORKFLOW</small></div><div class="skill"><b>Unreal Engine</b><small>REALTIME 3D</small></div><div class="skill"><b>Python</b><small>TOOLS + AUTOMATION</small></div><div class="skill"><b>Linux</b><small>OPEN SYSTEMS</small></div><div class="skill"><b>AVR / PIC</b><small>MICROCONTROLLERS</small></div><div class="skill"><b>STM32</b><small>ARM CORTEX-M</small></div><div class="skill"><b>Embedded C</b><small>FIRMWARE</small></div><div class="skill"><b>AI tools</b><small>GENERATIVE WORKFLOWS</small></div></div></div></section>
+<section class="section" id="work"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Different disciplines.<br>One creative mindset.</h2></div><div class="section-note">Explore my work across visual effects, design, motion and technical experiments.</div></div><div class="work-grid"><a class="work" href="https://www.youtube.com/@VFXbyDexter" target="_blank" rel="noreferrer"><div><h3>VFX & Compositing</h3><p>Breakdowns, visual effects experiments and compositing work.</p></div><div class="arrow">VIEW ON YOUTUBE ↗</div></a><a class="work" href="https://www.behance.net/pardeepk21" target="_blank" rel="noreferrer"><div><h3>Design & Visuals</h3><p>Graphic design, visual exploration and selected creative projects.</p></div><div class="arrow">VIEW ON BEHANCE ↗</div></a><a class="work" href="https://www.instagram.com/_vfxbydexter" target="_blank" rel="noreferrer"><div><h3>Creative Updates</h3><p>Recent visuals, experiments and behind-the-scenes moments.</p></div><div class="arrow">VIEW ON INSTAGRAM ↗</div></a></div></div></section>
+<section class="section" id="connect"><div class="wrap"><div class="section-head"><div><div class="eyebrow">04 / Find me online</div><h2>Let’s connect.</h2></div><div class="section-note">For collaborations, creative projects, opportunities or a good conversation.</div></div><div class="social-grid"><a class="social" href="https://www.linkedin.com/in/pardeepk21/" target="_blank" rel="noreferrer"><strong>LinkedIn ↗</strong><span>PROFESSIONAL</span></a><a class="social" href="https://www.behance.net/pardeepk21" target="_blank" rel="noreferrer"><strong>Behance ↗</strong><span>PORTFOLIO</span></a><a class="social" href="https://www.instagram.com/_vfxbydexter" target="_blank" rel="noreferrer"><strong>Instagram ↗</strong><span>CREATIVE FEED</span></a><a class="social" href="https://www.youtube.com/@VFXbyDexter" target="_blank" rel="noreferrer"><strong>YouTube ↗</strong><span>VFX BY DEXTER</span></a></div><div class="contact" style="margin-top:18px"><div><div class="eyebrow">Have a project in mind?</div><h2 style="font-size:28px;margin-top:10px">Let’s make something meaningful.</h2><p>For collaborations, freelance projects and professional opportunities, reach out by email.</p></div><a class="btn primary" href="mailto:pardeepk.dexter@gmail.com">Email me ↗</a></div></div></section>
+</main><footer class="wrap"><div>© <span id="year"></span> PARDEEP KUMAR</div><span>BUILT WITH CURIOSITY · POWERED BY GITHUB PAGES</span></footer>
+<script>const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
